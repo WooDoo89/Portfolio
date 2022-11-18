@@ -4,6 +4,8 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+flask = "*"
+autopep8 = "*"
 
 [dev-packages]
 
