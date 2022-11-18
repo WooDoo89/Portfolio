@@ -5,7 +5,9 @@ name = "pypi"
 
 [packages]
 flask = "*"
-autopep8 = "*"
+black = "*"
+flake8 = "*"
+python-dotenv = "*"
 
 [dev-packages]
 

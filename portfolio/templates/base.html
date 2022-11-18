@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Vitalij Gurin | Portfolio |</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Indie+Flower&display=swap"
+      rel="stylesheet">
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+</head>
+
+<body>
+   <header class="header">
+      <h1 class="h1">Vitalij Gurin</h1>
+
+      <nav class="nav">
+         <a href="{{ url_for('home') }}" class="nav__link {{ 'nav__link--active' if request.path == url_for('home') }}">
+            Projects
+         </a>
+         <a href="{{ url_for('about') }}"
+            class="nav__link {{ 'nav__link--active' if request.path == url_for('about') }}">
+            About
+         </a>
+         <a href="{{ url_for('contact') }}"
+            class="nav__link {{ 'nav__link--active' if request.path == url_for('contact') }}">
+            Contact
+         </a>
+      </nav>
+   </header>
+
+   {% block content %}
+   {% endblock %}
+</body>
+
+</html>
